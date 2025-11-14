@@ -1,0 +1,169 @@
+/* --- css/style.css --- */
+:root {
+    --bg-color: #02060d;         /* Noir profond bleuté */
+    --card-bg: #0b1624;          /* Fond des cartes */
+    --primary-color: #00eaff;    /* Bleu Cyan Cybernétique */
+    --primary-dim: rgba(0, 234, 255, 0.1);
+    --text-color: #e6f4f6;
+    --secondary-text: #8899ac;
+    --font-tech: 'Courier New', Courier, monospace; 
+    --font-body: 'Segoe UI', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Arrière-plan grille futuriste */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: 
+        linear-gradient(var(--primary-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--primary-dim) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- NAV --- */
+nav {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 13, 0.95);
+    border-bottom: 1px solid var(--primary-dim);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-tech);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.nav-links a {
+    margin-left: 30px;
+    font-family: var(--font-tech);
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* --- CONTENT WRAPPER --- */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 10%;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* --- BOUTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: var(--font-tech);
+    font-weight: bold;
+    margin-top: 20px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- TABLEAU CONTACT (Page About) --- */
+.contact-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-family: var(--font-tech);
+}
+
+.contact-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--primary-dim);
+}
+
+.contact-table td:first-child {
+    color: var(--primary-color);
+    width: 150px;
+    font-weight: bold;
+}
+
+.contact-table tr:hover {
+    background: rgba(0, 234, 255, 0.05);
+}
+
+/* --- CAROUSEL (Page Project) --- */
+.carousel-view {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-out;
+}
+
+.card {
+    min-width: 320px;
+    background: var(--card-bg);
+    border: 1px solid #1e2a38;
+    padding: 25px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.card h3 { margin-bottom: 10px; color: #fff; }
+.card p { font-size: 0.9rem; color: var(--secondary-text); }
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #445566;
+    border-top: 1px solid #0f1a25;
+}
