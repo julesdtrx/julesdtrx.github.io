@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | CyberPortfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">User@CyberSec:~#</div>
+        <div class="nav-links">
+            <a href="../index.html">/home</a>
+            <a href="project.html" class="active">/projects</a>
+            <a href="about.html">/about</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>// Base de données Projets</h2>
+        
+        <div class="carousel-view">
+            <div class="carousel-track" id="track">
+                
+                <div class="card">
+                    <h3>[01] Analyse Forensique</h3>
+                    <p>Reconstitution d'une attaque par ransomware via l'analyse de dump mémoire (Volatility) et logs Windows.</p>
+                    <br><small style="color:var(--primary-color)">> Volatility, Wireshark</small>
+                </div>
+
+                <div class="card">
+                    <h3>[02] Hardening Linux</h3>
+                    <p>Script Bash automatisant la sécurisation d'un serveur Debian : configuration SSH, Fail2Ban, IPTables.</p>
+                    <br><small style="color:var(--primary-color)">> Bash, Linux Admin</small>
+                </div>
+
+                <div class="card">
+                    <h3>[03] SIEM Lab</h3>
+                    <p>Déploiement d'une stack ELK (Elasticsearch, Logstash, Kibana) pour monitorer les attaques SSH.</p>
+                    <br><small style="color:var(--primary-color)">> Docker, ELK Stack</small>
+                </div>
+
+                <div class="card">
+                    <h3>[04] Script Python Nmap</h3>
+                    <p>Création d'un scanner de port léger avec Python socket pour automatiser la reconnaissance réseau.</p>
+                    <br><small style="color:var(--primary-color)">> Python, Networking</small>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="margin-top:20px;">
+            <button class="btn" onclick="moveSlide(-1)">PRÉCÉDENT</button>
+            <button class="btn" onclick="moveSlide(1)">SUIVANT</button>
+        </div>
+    </main>
+
+    <footer>SYSTEM STATUS: ONLINE | © 2025</footer>
+    
+    <script src="../annexes/script.js"></script>
+</body>
+</html>
