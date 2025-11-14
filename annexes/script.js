@@ -4,7 +4,7 @@
 const typeElement = document.getElementById('typing-effect');
 // On vérifie si l'élément existe (pour ne pas faire bugger les autres pages)
 if (typeElement) {
-    const words = ["Pentester Junior", "Développeur Python", "Network Admin", "CTF Player"];
+    const words = ["Pentester Junior", "Développeur Junior Python / C / C++ / Java", "Network Admin", "CTF Player", "Audit system"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
