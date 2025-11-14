@@ -1,8 +1,8 @@
-/* --- css/style.css --- */
+
 :root {
-    --bg-color: #02060d;         /* Noir profond bleuté */
-    --card-bg: #0b1624;          /* Fond des cartes */
-    --primary-color: #00eaff;    /* Bleu Cyan Cybernétique */
+    --bg-color: #02060d;         
+    --card-bg: #0b1624;          
+    --primary-color: #00eaff;   
     --primary-dim: rgba(0, 234, 255, 0.1);
     --text-color: #e6f4f6;
     --secondary-text: #8899ac;
@@ -23,7 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Arrière-plan grille futuriste */
 body::before {
     content: "";
     position: fixed;
@@ -38,7 +37,7 @@ body::before {
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-/* --- NAV --- */
+
 nav {
     padding: 20px 5%;
     display: flex;
@@ -70,7 +69,7 @@ nav {
     color: var(--primary-color);
 }
 
-/* --- CONTENT WRAPPER --- */
+
 main {
     flex: 1;
     display: flex;
@@ -86,7 +85,7 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* --- BOUTONS --- */
+
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -105,7 +104,7 @@ h1, h2 {
     box-shadow: 0 0 15px var(--primary-color);
 }
 
-/* --- TABLEAU CONTACT (Page About) --- */
+
 .contact-table {
     width: 100%;
     max-width: 600px;
@@ -129,7 +128,7 @@ h1, h2 {
     background: rgba(0, 234, 255, 0.05);
 }
 
-/* --- CAROUSEL (Page Project) --- */
+
 .carousel-view {
     width: 100%;
     overflow: hidden;
@@ -159,7 +158,7 @@ h1, h2 {
 .card h3 { margin-bottom: 10px; color: #fff; }
 .card p { font-size: 0.9rem; color: var(--secondary-text); }
 
-/* --- FOOTER --- */
+
 footer {
     text-align: center;
     padding: 20px;
