@@ -1,8 +1,4 @@
-/* --- annexes/script.js --- */
-
-// 1. EFFET TYPEWRITER (Page d'accueil)
 const typeElement = document.getElementById('typing-effect');
-// On vérifie si l'élément existe (pour ne pas faire bugger les autres pages)
 if (typeElement) {
     const words = ["Pentester Junior", "Développeur Junior Python / C / C++ / Java", "Network Admin", "CTF Player", "Audit system"];
     let wordIndex = 0;
@@ -24,7 +20,7 @@ if (typeElement) {
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
-            typeSpeed = 2000; // Pause à la fin du mot
+            typeSpeed = 2000; 
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
@@ -33,23 +29,19 @@ if (typeElement) {
 
         setTimeout(type, typeSpeed);
     }
-    // Lancer l'animation
     type();
 }
 
-// 2. CAROUSEL LOGIC (Page Projets)
 const track = document.getElementById('track');
 if (track) {
     let scrollAmount = 0;
-    
-    // Fonction accessible depuis le HTML
+
     window.moveSlide = function(direction) {
-        const cardWidth = 340; // Largeur carte + gap
+        const cardWidth = 340; 
         const maxScroll = track.scrollWidth - track.clientWidth;
 
         scrollAmount += direction * cardWidth;
 
-        // Limites
         if (scrollAmount < 0) scrollAmount = 0;
         if (scrollAmount > maxScroll) scrollAmount = maxScroll;
 
